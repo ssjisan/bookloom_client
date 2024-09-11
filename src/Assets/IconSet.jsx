@@ -632,6 +632,65 @@ export const Sale = ({ color, size }) => {
   );
 };
 
+export const Search = ({ color, size }) => {
+  return (
+    <div
+      style={{
+        width: size,
+        height: size,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <svg
+        width={size}
+        height={size}
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="11.5" cy="11.5" r="9.5" stroke={color} strokeWidth="1.5" />
+        <path
+          d="M18.5 18.5L22 22"
+          stroke={color}
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
+      </svg>
+    </div>
+  );
+};
+
+export const Plus = ({ color, size }) => {
+  return (
+    <div
+      style={{
+        width: size,
+        height: size,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <svg
+        width={size}
+        height={size}
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M19 12.0001L12 12.0001M12 12.0001L5 12.0001M12 12.0001L12 5M12 12.0001L12 19"
+          stroke={color}
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
+      </svg>
+    </div>
+  );
+};
+
 // PropTypes
 Dashboard.propTypes = {
   color: PropTypes.string.isRequired,
@@ -703,6 +762,14 @@ Upload.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 };
 Sale.propTypes = {
+  color: PropTypes.string.isRequired,
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+};
+Search.propTypes = {
+  color: PropTypes.string.isRequired,
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+};
+Plus.propTypes = {
   color: PropTypes.string.isRequired,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 };

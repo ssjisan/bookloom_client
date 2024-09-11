@@ -1,8 +1,9 @@
-import { Box, Card, Stack, Typography } from "@mui/material";
-import Grid from '@mui/material/Grid2';
+import { Box, Stack, Typography } from "@mui/material";
+import Grid from "@mui/material/Grid2";
 import { ArrowLeft } from "../assets/IconSet";
 import { useNavigate } from "react-router-dom";
-import BookListPart from "../Components/SellBooks/BookListPart";
+import BookEntryScreen from "../Components/SellBooks/BookEntryScreen";
+import BookAddedScreen from "../Components/SellBooks/BookAddedScreen";
 
 export default function SellBook() {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ export default function SellBook() {
   return (
     <Box>
       <Stack
-        sx={{ p: "16px 40px", backgroundColor: "#F4F0FF" }}
+        sx={{ p: "16px 40px", backgroundColor: "#F4F0FF", height: "60px" }}
         direction={"row"}
       >
         <Stack
@@ -30,15 +31,13 @@ export default function SellBook() {
           Sell Book
         </Typography>
       </Stack>
-      <Box sx={{ p: "40px" }}>
+      <Box>
         <Grid container spacing={3}>
-          <Grid size={{ xs: 12, sm: 12, md: 7, lg: 7 }}>
-            <Card>
-              <BookListPart />
-            </Card>
+          <Grid size={{ xs: 12, sm: 4, md: 3, lg: 3 }}>
+            <BookEntryScreen />
           </Grid>
-          <Grid size={{ xs: 12, sm: 12, md: 5, lg: 5 }}>
-            <Card>Sale Details</Card>
+          <Grid size={{ xs: 12, sm: 8, md: 9, lg: 9 }}>
+            <BookAddedScreen />
           </Grid>
         </Grid>
       </Box>
